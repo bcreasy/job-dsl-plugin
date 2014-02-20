@@ -147,7 +147,7 @@ class ScmContext implements Context {
             remotePoll gitContext.remotePoll
             ignoreNotifyCommit 'false'
             //buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"
-            gitTool 'Default'
+            gitTool gitContext.gitTool
             //submoduleCfg 'class="list"'
             if (gitContext.relativeTargetDir) {
                 relativeTargetDir gitContext.relativeTargetDir

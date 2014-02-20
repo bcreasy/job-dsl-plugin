@@ -19,6 +19,7 @@ class GitContext implements Context {
     boolean shallowClone = false
     String relativeTargetDir
     String reference
+    String gitTool = 'Default'
     Closure withXmlClosure
     Node browser
     Node mergeOptions
@@ -93,6 +94,10 @@ class GitContext implements Context {
 
     void reference(String reference) {
         this.reference = reference
+    }
+
+    void gitTool(String gitTool) {
+        this.gitTool = gitTool
     }
 
     void configure(Closure withXmlClosure) {
